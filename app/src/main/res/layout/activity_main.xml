@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etNum1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Angka Pertama"
+        android:inputType="numberDecimal|numberSigned" />
+
+    <EditText
+        android:id="@+id/etNum2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Angka Kedua"
+        android:inputType="numberDecimal|numberSigned"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Tombol Operasi untuk Menghitung -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+        <Button android:id="@+id/btnAdd" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="+" />
+        <Button android:id="@+id/btnSub" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="-" />
+        <Button android:id="@+id/btnMul" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="*" />
+        <Button android:id="@+id/btnDiv" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="/" />
+    </LinearLayout>
+
+    <!-- Menampilkan Hasil Perhitungan -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hasil: -"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lihat History:"
+        android:textStyle="bold" />
+
+    <!-- Tombol Khusus untuk Membuka Fragment History -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+        <Button android:id="@+id/btnHistAdd" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="H +" android:backgroundTint="#FFA500"/>
+        <Button android:id="@+id/btnHistSub" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="H -" android:backgroundTint="#FFC0CB"/>
+        <Button android:id="@+id/btnHistMul" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="H *" android:backgroundTint="#81C784"/>
+        <Button android:id="@+id/btnHistDiv" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="H /" android:backgroundTint="#64B5F6"/>
+    </LinearLayout>
+
+    <!-- Kontainer untuk menampilkan Fragment -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
